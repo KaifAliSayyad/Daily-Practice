@@ -1,0 +1,42 @@
+Date : 07-01-2025
+Softwares to be downloaded
+1. Java 17
+2. Git
+3. Docker
+4. Nodejs
+5. Postman
+
+Class - Noun
+Method - Verb
+Entity - Variable
+
+is a - Inheritance
+has a - Composition/ Association
+
+OOP
+- Abstraction - Hiding Behaviour/ Implementation
+- Polymorphism - Static (Compile time / Overloading) and Runtime (Runtime / Overriding)
+- Inheritance - Inheriting the properties parent class in children class
+- Encapsulation - Data hiding
+
+(Pure Encapsulated Class - A class with all the variables as private and methods as public is called pure encapsulated class)
+
+(
+Static methods cannot be overridden
+Special case, if both the parent and child class methods are static then the implementation would be of the type of the instance variable holding the object
+)
+
+
+Assignment - Write a program for Employee Management application
+
+Types of Employee -
+1. Clerk
+2. Programmer
+3. Manager
+
+(name, age, salary, designation)
+display()
+raiseSalary() - {
+	1. Show name of the person
+	2. Pass by how to increment the salary
+}

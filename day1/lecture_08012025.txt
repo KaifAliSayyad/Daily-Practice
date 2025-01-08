@@ -1,0 +1,81 @@
+Code Quality Standards
+1. Class/ Enum name should always start with Capital letters
+2. Method and variable names should always start with small letters.
+3. For more the 1 word in a name use "camelCasing".
+4. Package names must all in small letters. For more than one word no underscores or camelCasing should be used, write it as one complete word.
+5. While declaring constants use all capital letters. For more than one word name use underscore for separation.
+6. All the variables declared in Enums are final constants, therefore they should be written in all capital letters.
+
+JDK (Compiles / gives output as .class file) vs JRE (runs .class files)
+
+Path (always a path to executable files) vs ClassPath (path to .class files for collection of .class files i.e .jar files)
+
+
+Date types
+
+Constants : final
+Variables :
+	Primitive :
+		Numeric :
+			Whole : byte(1), short(2), int(4), long(8)
+		Real : float(4), double(8)
+		Non-numeric :
+			char(2) (C/ C++ uses ASCII format so they use 1 byte per character, while JAVA uses Unicode character that's why it uses 2 bytes per character)
+			boolean(1)
+	Non-Primitive : 
+		Arrays, Any Class, Interface, Enums
+
+
+(There is no "short int" , "long int" in java)
+(There is no "unsigned" keyword in java)
+
+Control Statements : 
+	Conditional : if, if-else, if-else-if, nested-if, switch
+	Looping/ Repetitional/ Iterative : for, while, do-while
+	Branching/ Jumping : break, continue, return
+
+
+Operators
+1. Unary
+2. Binary
+3. Ternary
+
+a. Arithmetic	: +, -, *, /, %
+b. Logical	: &&, ||, !
+c. Bitwise	: &, |, ^
+d, Relational	: <, >, <=, >=, ==, !=
+e. Inc/Decr	: ++, --
+d. Shift	: >>, << (shift is performed without shifting sign bit), >>> (sign bit is also shifted)
+e. Assignment	: =, +=, -=, *=, /=, %=
+d. Conditional	: res = (a>b) ? a (true) : b (false)
+
+
+
+Assignment
+Clerk (salary:20000 + incr:2000), Programmer (30000 + 5000), Manager (100000 + 15000)
+ 
+java EmployeeManagementApp
+ 
+---------------------
+1. Create
+2. Display
+3. Raise Salary
+4. Exit
+----------------------
+Enter choice :- 1
+---------------------
+1. Clerk
+2. Programmer
+3. Manager
+4. Exit
+----------------------
+Enter choice :- 2
+Enter name : Suman
+Enter age : 25
+---------------------
+1. Clerk
+2. Programmer
+3. Manager
+4. Exit
+----------------------
+Enter choice :- 4
