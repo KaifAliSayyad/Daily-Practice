@@ -39,3 +39,15 @@ ________________________________________________________________________________
 4. Doesn't support multiple inheritance							Supports MI
 5. Variables/ Methods can have various access modifiers					Only public variables/ method
 6. Can have constructor									Doesn't have constructor.
+
+
+Types of Interfaces
+
+1. Marker Interface
+____________________
+A marker interface is an interface that doesn't have any methods or constants inside it. It provides run-time type information about objects, so the compiler and JVM have additional information about the object. A marker interface is also called a tagging interface. For example "Clonable".
+
+2. Functional Interface
+_________________________
+A functional interface is an interface that has only one method and it should be abstract.
+
