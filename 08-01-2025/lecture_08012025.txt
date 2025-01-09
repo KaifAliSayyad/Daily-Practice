@@ -10,8 +10,9 @@ JDK (Compiles / gives output as .class file) vs JRE (runs .class files)
 
 Path (always a path to executable files) vs ClassPath (path to .class files for collection of .class files i.e .jar files)
 
+* Pure Class is a class which has all the variables as private and methods as public.
 
-Date types
+Data types
 
 Constants : final
 Variables :

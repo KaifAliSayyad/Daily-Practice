@@ -1,0 +1,21 @@
+Date : 09-01-2025
+
+* A class should only contain attributes with has-a relationship. Hence the List<Employee> declared in the last assignment in wrong.
+
+* Interface and Abstract Classes in java
+1. All the methods declared in an interface are by default public abstract.
+2. All the variables declared in an interface are by default public static final i.e they are available globally. (Need to be initialized compulsorily)
+3. We are inheriting nothing when a class implements an interface.
+4. Implementing an interface just implies a rule that this class must implement the methods compulsorily declared in interface.
+5. The statement that interfaces allow multiple inheritance means,
+WRONG UNDERSTANDING : A class can implement multiple interfaces, yes it is true, but because of rule 3 and 4, it is not the correct explanation.
+CORRECT UNDERSTANDING : An interface can implement more the one interfaces. (interface C implements A, B)
+
+* Interface supports multiple inheritance.
+* But interfaces were not added to support multiple inheritance in java
+
+Why were interfaces added in java?
+If we have a class A on client side and Class B on server side and a method abc() in class A needs to be called from client side to server side which is implemented in Class B. Typically we'll use Class B extends A so that we can call abc() method. But there is one issue, our code can be accessed by client now.
+So, by using interface we can have abstraction and hence achieve security as we are now using Class B implements A.
+One another application of using interfaces is allowing different methods to be accessed by different groups of users by declaring the respective methods in respective interfaces.
+
