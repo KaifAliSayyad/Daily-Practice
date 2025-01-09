@@ -19,3 +19,23 @@ If we have a class A on client side and Class B on server side and a method abc(
 So, by using interface we can have abstraction and hence achieve security as we are now using Class B implements A.
 One another application of using interfaces is allowing different methods to be accessed by different groups of users by declaring the respective methods in respective interfaces.
 
+Constructor		vs.		Method
+____________________________________________________
+1. Called for creating an object.	Called after creating an object.
+2. Should not have return type.		Should have return type.
+
+Similarities
+___________________
+Initializing of variables is default job of the constructor, but apart from that we can put any logic inside a constructor like a method.
+
+The dissimilarity where we distinguish in writing any logic in constructor or method is that, in constructor we only put the logic which we want to run only once (on the time of object creation) while in methods we write the logic which we want to reuse.
+
+
+Abstract Class							vs.			Interface
+_________________________________________________________________________________________________________________________________________________________
+1. Can have methods with body as well as without body					Only abstract methods.
+2. Has variables which can be modified							Only static final variables are allowed
+3. Can have instance variables								Only static variables
+4. Doesn't support multiple inheritance							Supports MI
+5. Variables/ Methods can have various access modifiers					Only public variables/ method
+6. Can have constructor									Doesn't have constructor.
