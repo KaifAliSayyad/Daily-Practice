@@ -1,6 +1,6 @@
 DATE : 10-01-2025
 
-Access Modifiers
+Access Modifiers (img : access modifiers)
 ______________________
 1. Default - Available in package
 2. Public - Available to everyone
@@ -21,3 +21,21 @@ ______________________
 * Protected methods and variables cannot be accessed by subclasses using instance variables of parent class, rather they can be called directly. (clone method of object class).
 
 ** Always check the class scope before members
+
+
+Non-Access Modifiers
+_______________________
+1. abstract
+2. static
+3. final
+
+
+	  |	variables	classes		methods
+__________|_____________________________________________________________
+	  |
+abstract  |	N		Y		Y
+static	  |	Y		Y(inner)	Y
+final	  |	Y		Y		y
+
+
+* Terminology : Static class : classes which have everything inside them are static.
