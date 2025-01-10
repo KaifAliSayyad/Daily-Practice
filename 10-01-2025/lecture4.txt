@@ -1,0 +1,23 @@
+DATE : 10-01-2025
+
+Access Modifiers
+______________________
+1. Default - Available in package
+2. Public - Available to everyone
+3. Protected	- Visible within same package or it's subclass
+4. Private	- Only visible to class itself
+
+* Outer class can only have Public and Default as access modifiers
+* Inner class can have Private, Public and Protected
+* Default scope is available only within the package
+* There no default keyword as access modifier. It's just a terminology.
+
+* How to create package in java?
+-> code (packages.java)
+   compile with " -d . " to create custom package
+
+* import statement can only import the package itself and not it's sub-packages.
+
+* Protected methods and variables cannot be accessed by subclasses using instance variables of parent class, rather they can be called directly. (clone method of object class).
+
+** Always check the class scope before members
