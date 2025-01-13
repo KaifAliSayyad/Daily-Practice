@@ -1,0 +1,41 @@
+DATE : 13-01-2025
+
+Exception Handling
+________________________
+
+Q. Error vs Exception
+-> Errors are made my programmers while coding, while exceptions can be made by end user which needs to be handled by programmer.
+
+* Errors -> 
+	1. Compile time error (Syntactical)
+	2. Runtime error (Logical) :
+		a. Error : cannot be handled
+		b. Exception : can be handled
+			I. Compile time exception (Checked exception) : These exceptions are strictly checked by the compiler and it does not allow us to compile the code unless these exceptions are handled. These are made to avoid critical exceptions which affect system resources (example - I/O, Socket, Memory).
+			II. Runtime exception (Unchecked exception) : These exceptions are not explicitly checked by the compiler, and thus we can compile our code without handling these exception. (examples - NullPointerException, ArithmeticException, ArrayIndexOutOfBoundsException).
+
+
+* try : try block is part of code where exceptions may be raised.
+
+* catch : it is used to handle the exceptions occurred in try block.
+
+* finally : block of code which runs regardless the exception occurs or not. Program will terminate after finally if exception is occurred.
+(finally block is always executed, but the only scenario where it does not execute is using system.exit() in try block, it even executes when using return statement in try block)
+
+* throw (maximum one exception): throw is used to manually raise an exception. (It is not a good practice to do exception handling in a program.)
+
+* throws : is to use when you do not want your method to handle this exception, it is only to signify that this method will pass on any exception occured to the method which has called current method. It is to pass exceptions to who has called it.
+
+Q. How to create custom exception
+-> 1. To create Checked exception create a new class and extend "Exception".
+2. To create Unchecked exception create a new class and extend "RuntimeException".
+Also there are minimum requirements which need to be completed to create a custom exception.
+	1. To create a constructor one without any parameter and one with "String" as parameter.
+	2. To Map these constructors to their super class constructors.
+(Now the constructor with parameter "String" will by default map to super() which is parent class default constructor, but we have to manually map it to super class parameterised constructer using "super(String)".
+
+* JVM has default exception handler
+-> Three things it does.
+	1. It prints stack trace.
+	2. It prints the name of the exception and the reason behind the exception.
+	3. It terminated the program.
