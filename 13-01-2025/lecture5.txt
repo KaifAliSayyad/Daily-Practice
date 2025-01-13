@@ -39,3 +39,10 @@ Also there are minimum requirements which need to be completed to create a custo
 	1. It prints stack trace.
 	2. It prints the name of the exception and the reason behind the exception.
 	3. It terminated the program.
+
+Q. throws keyword.
+-> with throws keyword we can pass checked exceptions to the parent method (method which called current method). We can pass multiple exceptions by separating them using comma. Also unchecked exceptions are automatically passed, we do not need to explicitly mention them.
+example : public void abc() throws IOException, SQLException, SomeUncheckedException.
+	throws is does not throws any exceptions, but it is to only signfy that this block of code might throw these exceptions (checked) and they are passed on to the parent method to be handled.
+
+* If we have multiple catch blocks then their order should be from subclass to super class.

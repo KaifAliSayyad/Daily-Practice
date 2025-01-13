@@ -1,7 +1,10 @@
 import java.io.*;
 import java.sql.*;
-public class ExceptionDemo{
-	public static void main(String[] args){
+import java.lang.*;
+
+
+class A{
+	public void abc(){
 		int a = 5;
 		for(int i = 1; i <= 20 ; i++){
 			try{
@@ -46,6 +49,21 @@ public class ExceptionDemo{
 			}
 		System.out.println("Program continues...");
 		}
+	}
+
+	public void xyz(){
+		abc();
+	}
+
+	public void atoz(){
+		xyz();
+	}
+}
+
+public class ExceptionDemo{
+	public static void main(String[] args){
+		A a1 = new A();
+		a1.atoz();
 	}
 }
 
