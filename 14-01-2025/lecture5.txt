@@ -1,0 +1,14 @@
+Date : 14-01-2025
+
+* New concept in Exception handling "TryWithResouces"
+-> code "TryWithResources.java"
+	Initialising critical resources with round barckets in " try(Connection con , ...) ", this syntax is called try with resources method, it automatically calls the .close() method on these resources once the try block has completed executing.
+	
+(Important requirement for initialising any type of object in round brackets in try block is that, the object for class which we are trying to create should always implement "AutoClosable" interface.
+And this AutoClosable interface forces us to implement it's abstract method "close()".)
+
+( The resources are allocated from left to right in the round brackets and released in exactly the reverse order. For example : While creating a database connection, then a collection reference, then an object reference...etc. It will automatically allocate the resources from left to right as written in try() and de-allocate them in exactly reverse order. See : "TryWithResources.png" and "TryWithResources_WithException.png" )
+
+( Also the statements outside try block behave as if they are in finally block by default, no need to explicitly create a finally block. )
+
+****(try-with-resources can exist without catch and finally or either)****
