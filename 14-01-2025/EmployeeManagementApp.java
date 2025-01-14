@@ -50,7 +50,11 @@ public class EmployeeManagementApp {
     public static boolean delete(){
         Scanner sc = new Scanner(System.in);
         int startingIndexForDeletion = 0;
-        while(employees[startingIndexForDeletion] == null) startingIndexForDeletion++;
+        while(startingIndexForDeletion < 100 && employees[startingIndexForDeletion] == null) startingIndexForDeletion++;
+        if(startingIndexForDeletion == 100){
+            System.out.println("No employee present to delete...");
+            return false;
+        }
         try{
             System.out.println("Entering any number apart from this will exit this menu.");
             System.out.print("Enter the id of the employee you want to delete ("+(startingIndexForDeletion + 1)+" - "+(employeeCount)+") : ");

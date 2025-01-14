@@ -3,7 +3,7 @@ import java.util.*;
 
 public final class Clerk extends Employee{
     public Clerk(int id){
-        super(id);
+        super(id, 18, 60);
         designation = Designation.valueOf("CLERK");
     }
 
@@ -13,5 +13,13 @@ public final class Clerk extends Employee{
             return;
         }
         salary += 2000;
+    }
+
+    public final void setMaxAge(int newAge){
+        age = newAge;
+    }
+
+    public final void setMinAge(int newAge){
+        age = newAge;
     }
 }

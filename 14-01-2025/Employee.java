@@ -5,6 +5,7 @@ import emp.exceptions.InvalidAgeException;
 import emp.exceptions.InvalidChoiceException;
 import emp.exceptions.InvalidIdException;
 import emp.exceptions.InvalidSalaryException;
+import emp.utils.Menu;
 
 enum Designation{
     CLERK,
@@ -15,61 +16,27 @@ enum Designation{
 public abstract class Employee{
     private int id;
     private String name;
-    private int age;
+    int age;
     protected Designation designation;
     float salary;
     public static int employeeCount;
+    static int minAge;
+    static int maxAge;
 
-    public Employee(int id){
+    public Employee(int id, int minAge, int maxAge){
         this.id = id;
+        this.minAge = minAge;
+        this.maxAge = maxAge;
        while(getDetails());
        employeeCount++;
     }
 
+
     public boolean getDetails(){
         
-        Scanner sc = new Scanner(System.in);
-
-        System.out.print("Enter the name\t : ");
-        String newName = sc.nextLine();
-        if(newName.length() == 0){
-            System.out.println("Invalid name");
-            return true;
-        }else{
-            name = newName;
-        }
-
-
-        try{
-            System.out.print("Enter the age\t : ");
-            int newAge = sc.nextInt();
-        
-            if(newAge < 20 || newAge > 60){
-                throw new InvalidAgeException();
-            }else{
-                age = newAge;
-            }
-        }catch(InputMismatchException e){
-            System.out.println("Please enter numbers only...");
-            return true;
-        }catch(InvalidAgeException e){
-            return true;
-        }
-
-        try{
-            System.out.print("Enter salary\t : ");
-            float newSalary = sc.nextFloat();
-            if(newSalary < 0){
-                throw new InvalidSalaryException();
-            }else{
-                salary = newSalary;
-            }
-        }catch(InputMismatchException e){
-            System.out.println("Please enter numbers only...");
-            return true;
-        }catch(InvalidSalaryException e){
-            return true;
-        }
+        name = Menu.readName();
+        age = Menu.readAge(minAge, maxAge);
+        salary = Menu.readSalary();
 
         return false;
     }
@@ -89,5 +56,10 @@ public abstract class Employee{
     }
 
     public abstract void raiseSalary();
+
+    public abstract void setMinAge(int age);
+    
+    public abstract void setMaxAge(int age);
+
     
 }

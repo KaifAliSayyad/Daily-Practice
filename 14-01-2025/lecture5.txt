@@ -12,3 +12,10 @@ And this AutoClosable interface forces us to implement it's abstract method "clo
 ( Also the statements outside try block behave as if they are in finally block by default, no need to explicitly create a finally block. )
 
 ****(try-with-resources can exist without catch and finally or either)****
+
+
+**Pattern Matching in java**
+syntax : 
+	Pattern p1 = Pattern.compile("{some_pattern}");
+	Matcher m1 = p1.match("{string_to_be_searched}");
+	Boolean result = m1.find();
