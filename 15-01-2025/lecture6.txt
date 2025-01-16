@@ -1,0 +1,97 @@
+DATE : 15-01-2025
+
+Immutable Classes
+____________________________________________________
+It is a class whose object is once created, it cannot be modified.
+
+Q. Need for Immutable Class
+-> When some data is to be shared by multiple threads
+
+Q. Requirements
+-> 1. Immutable class should be declared final, so that it's child classes cannot be created.
+2. All the attributes should be declared as final, so that they cannot be changed once assigned.
+3. All the attributed should be declared as private, so that they cannot be accessed using our class's object.
+4. It should provide getter methods for the attributes, but not setter methods as we do not want to modify our attributes.
+5. It should override .hashCode() method to modify the logic of generating hash code. As it we have two objects with all the attributes same, then they would be treated as two different object, but it is not the intended behaviour of our ImmutableClass. Hence we need to modify the logic of generating hashCode.
+6. It should override .equals() method to check if two objects are same or not. Because hash code alone does not ensure that objects are not duplicated, for example if we are to use Set<{ImmutableClass}> then it will check if two objects are same or not using .equals() method.
+7. Also it should implement "Serializable" class, so that it can be sent over the network by serialization
+
+*"record" Class in java
+->1. Record class was introduced in Java 17
+2. It is part of java.lang package (java.lang.Record)
+3. Using "record" keyword we can easily create our own ImmutableClass.
+4. It uses canonical constructor and handles all the formalities of creating ImmutableClass itself.
+5. See "ImmutableClass.java".
+
+
+__________________________________________________________________________
+Sealed class in java
+__________________________________________________________________________
+Q. Need for sealed class in java
+-> Suppose I have a class Manager, and I want that Manager can be inherited by SalesManager and not by Peon. Therefore, using sealed class we can specify which classes can inherit our class by using "permits" keyword.
+1. sealed class should specify classes which are allowed to inherit using permits keyword.
+2. To extend from a sealed class, current class should, be:
+	a. final : no one can extend it
+	b. sealed : can be extended by final, sealed, non-sealed
+	c. non-sealed : can be extended by any class
+
+___________________________________________________________________________
+Variables in Java
+___________________________________________________________________________
+1. Variables outside any methods are by default initialised by constructor.
+2. Variables declared inside methods have to be initialised explicitly.
+
+See "Variable.java"
+___________________________________________________________________________
+*New* switch in Java
+___________________________________________________________________________
+
+See "Variable.java"
+
+___________________________________________________________________________
+Design Patterns in Java
+___________________________________________________________________________
+Design patterns in Java refer to structured approaches involving objects and classes that aim to solve recurring design issues within specific contexts.
+
+Patterns	:
+	Architectural Patterns : MVC, MVVM/MVW, REST, Microservices, monolithic..etc..
+	Messaging Patterns : P2P, Pub/ Sub
+	Database Patterns : ER, DAO...etc
+	Integration Patterns : Point-to-Point, Hub-n-Spoke, ESB, etc..
+	Programmatic Patterns : Mutable, Immutable, etc...
+	Design Patterns		:
+		Object Oriented :
+			JAVA SE :
+				a. Creational : Everything which will specify how to create object of a class
+					I. Singleton : (A class of which only one object is created) See "Singleton.java".
+					II. Factory
+					III. Abstract Factory
+					IV. Prototype
+					V. Builder
+				b. Structural : 
+					I. Adapter
+					II. Bridge
+					III. Composite
+					IV. Flyweight
+					V. Decorator
+					VI. Proxy
+					VII. Facade
+				c. Behavioural : 
+					I. Observer
+					II. COR
+					III. Command
+					IV. Template
+					V. Interpreter
+					VI. Mediator
+					VII. Memento
+					VIII. State
+					IX. Visitor
+					X. Iterator
+					XI. Strategy
+			JAVA EE :
+				Presentation tier
+				Business tier
+				Integration tier
+	etc..
+Anti-pattern	:
+	
