@@ -62,7 +62,7 @@ Patterns	:
 	Design Patterns		:
 		Object Oriented :
 			JAVA SE :
-				a. Creational : Everything which will specify how to create object of a class
+				a. Creational : Everything which will specify how to create object of a class. (They imply using private constructor)
 					I. Singleton : (A class of which only one object is created) See "Singleton.java".
 					II. Factory
 					III. Abstract Factory

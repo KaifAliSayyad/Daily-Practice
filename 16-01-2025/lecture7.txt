@@ -1,0 +1,59 @@
+Date : 16-01-2025
+
+____________________________________________________________________________________________________________________________________________________________
+
+1) Factory Design Pattern
+
+This pattern is used when we need to implement some logic before deciding whether to create an object or not.
+For example I do not want to allow more than 5 Principals to be created.
+
+____________________________________________________________________________________________________________________________________________________________
+
+2) Abstract Factory Pattern
+
+This is factory of factory design pattern
+
+____________________________________________________________________________________________________________________________________________________________
+
+3) Prototype Pattern
+
+When we need to created many objects of the same class, which are same, when we do it using new A(), a lots of memory is required and so much stack memory is consumed. Threrefore we can simply use .clone() method on one object created, this saves us a lots of memory as clone() is just a byte by byte copy any object.
+
+____________________________________________________________________________________________________________________________________________________________
+
+4) Builder Design Pattern
+
+It is used when we need property based object creation, for example, if I only know some property of vehicle like 2 seats, petrol, 4 wheels..It will automatically decide which class's object should be created. 
+For Example : Streams api is written using Builder design pattern
+____________________________________________________________________________________________________________________________________________________________
+
+
+STRUCTURAL DESIGN PATTERNS
+____________________________________________________________________________________________________________________________________________________________
+
+1) Adapter 
+We use this when two class are almost similar and are needed to be adjusted a little to be compatible with one another. 
+For example : Our mobile phones use electricity, by the voltage of current directly may harm the device (not - compatible), therefore we use Adapter to change the input voltage given to our mobile..so the adapter works in-between these two to make them compatible with each other.
+
+____________________________________________________________________________________________________________________________________________________________
+
+2) Bridge
+Two different Class, which are not at all similar to each other, but we want to make them compatible with each other, we use a Bridge class in-between them.
+For Example : We have fan and then we have switch in our homes..but these two are completely different in attributes, properties, and behaviours, therefore we use Wire (Bridge class) in-between them.
+
+____________________________________________________________________________________________________________________________________________________________
+
+3) Decorator
+Takes input as another class, modifies it and gives output as it's own
+
+____________________________________________________________________________________________________________________________________________________________
+
+4) Proxy
+Pretending someone you are not.
+
+____________________________________________________________________________________________________________________________________________________________
+
+5) Facade
+See "facade.png"
+____________________________________________________________________________________________________________________________________________________________
+
