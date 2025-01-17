@@ -1,0 +1,51 @@
+Multithreading
+______________________________________________________________________
+1. Multithreading vs Multitasking
+
+2. Life cycle of a thread (See "thread_lifecycle.png")
+
+3. Differences between suspend(), wait(), resume(), notify(), notifyAll()
+	a. suspend() and resume() are from Thread class, wait() and notify() are from Object class
+	b. suspend(), resume() are deprecated, but wait() and notify() are safe to use
+	c. wait() and notify() can only be used from synchronise block
+	d. suspend() and resume() can be used from anywhere.
+
+4. Some more Thread methods
+	a. to refer to current thread we use "this"
+	b. to get name of the current thread use "this.getName()"
+	c. But from the static block, we cannot call getName() method, therefore there is another method called "Thread.currentThread().getName()". We can call the method "Thread.currentThread()" from either the static block or the non-static block.
+	c. We also have "a1.setPriority({integer})", to set the priority of the thread. Priority is just for selection of thread by the processor, it does not ensure the complete execution that thread. The higher the priority the more chances it has of selection.
+	d. "a1.join()" is the method to make current (main) thread to wait for given thread (a1) to complete.
+
+	e. If we have a child class (which means it already extends Parent class), but we have to create it's Thread. In that scenario, we can implement "Runnable" interface.
+	d. We can also create multiple threads of the same object.
+
+5. synchronized keyword
+	a. We can have whole method "synchronized", by putting synchronized in the method declaration.
+	b. To synchronize just the part of the method we can put it inside synchronized(this){{block_of_code}}.
+
+6. Daemon thread (run in background, with least priority)
+	a. To create a thread as daemon thread use "t1.setDaemon(true)"
+	b. Important : We cannot convert a normal thread into a Daemon thread, once it has started. (use setDaemon(true) before t1.start())
+	c. We cannot convert a Daemon thread to a normal thread after it has started.
+
+6. ThreadGroup
+	a. When we need to work on many threads at the same time we can use ThreadGroup.
+	b. For example, we have 1000 threads in a game, and we want to suspend some 200 of them, so rather than doing it manually, we can put them into ThreadGroup at the time of creation using syntax
+		{
+			ThreadGroup tg = new ThreadGroup();
+			Thread t1 = new Thread(tg, new A());
+		}
+
+	c. In (b) we can similarly create multiple thread groups and put different threads in different thread groups and use methods on threa group which will apply it to all the thread in that thread group.
+
+
+Assignment
+____________________________________________________________________
+Bike Racing Game
+-----------------
+* 10 Bikers with names and their start time
+* Countdown 10, 9, 8, ...... GO
+* Every biker when reaching the finish line mark their end time and ranking
+* Display the bikers list in ascending order of their rankings 
+* Display rankings along with start time, end time and time-taken
