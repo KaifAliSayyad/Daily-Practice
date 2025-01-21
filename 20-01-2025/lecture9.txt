@@ -1,0 +1,157 @@
+Date : 20-01-2025
+
+I. packages in java
+______________________________________________________________
+1. java.util
+2. java.time
+3. java.awt
+4. java.io
+5. java.net
+6. java.sql
+7. java.lang
+
+	_____________
+
+	String 
+	StringBuilder
+	StringBuffer
+
+	_____________
+
+	Object
+	Class
+	
+	_____________
+	
+	System
+	Math
+	Runtime
+	Record
+	_____________
+
+	Thread
+	ThreadGroup
+	
+	_____________
+
+	Throwable
+	Exception
+	Error
+	RuntimeException
+	ArithmeticeException
+	NullPointerException
+	IndexOutOfBoundsException
+	
+	_____________
+
+	Number
+	Integer
+	Float
+	Double
+	Short
+	Byte
+	Long
+	Boolean
+	Character
+		
+	Enum
+	
+	Cloneable
+	Runnable
+	AutoCloseable
+	Iterable
+
+	_____________
+	java.lang.reflect
+	
+	Field
+	Method
+	Constructor
+	_____________
+	java.lang.annotation
+		
+	Annotation
+
+___________________________________________________________
+II. Wrapper Classes in java
+	example:
+		Integer
+		Float
+		Double
+		Short
+		Byte
+		Long
+		Boolean
+		Character
+
+These are common wrapper classes in java.
+Q. Need of Wrapper Classes
+-> We need wrapper classes because the number of operations we can perform on primitive data types is limited. So by creating an object of this primitive data type, we can implement our own methods and many things just like any other object of any class. Main reason for this is because, when we declare ("int a"), the compiler understands that the data present in this variable should be treated as an Integer while processing. Also it need to be serialised before sending over the network, and our Object class implements Seriablisable, so expect out integer to inherit Object class and that is possible because of Wrapper Classes.
+
+Q. What is Autoboxing ?
+-> when I declare "int a = 10", and compile this code.
+	My java compiler automatically understands that this int should be wrapped in Integer class and does this work for us. This is called as Autoboxing.
+
+Q. Difference between String and StringBuffer.
+-> Whenever we create a new String, as we know String is immutable, so eveytime a new object is created in a memory (everytime I say s1 = "hi"; s1 = "hello";) two new objects are created "hi" and "hello", and first s1 was pointing to "hi" but now it is pointing to "hello". 
+Rather when we declare using StringBuffer different objects are not created eveytime, i.e StringBuffer is mutable.
+
+The tradeoff is when using String we can create different objects for each "string", and when using StringBuffer we can mutate the string in the reference present.
+
+
+Q. Difference between StringBuffer and StringBuilder.
+-> 1. StringBuffer is synchronized and StringBuilder is not.
+2. As almost all the methods in StringBuffer are synchronized.
+3. This will make a difference only in multi-threaded environments.
+4. StringBuffer is thread safe.
+
+______________________________________________________________________
+III. System
+
+Q. What is System.gc()?
+-> System.gc() is the request to garbage collector,
+***It is not a command, it is a request***, garbage collector might come if it is free.
+
+______________________________________________________________________
+IV. Math
+
+Use "javap java.lang.Math"
+
+______________________________________________________________________
+V. Runtime
+-> It is a class which can be used to run any application.
+-> It is a Singleton Class
+-> We cannot directly use Runtime by creating it's object
+-> We have to use a factory method .getRuntime().
+
+
+Q. What is Runtime Class used for ?
+-> a. (interview) We can use the Runtime class to run non-java application.
+b. Get number of processors.
+c. Get OS.
+d. Get reference of Runtime
+e. Then use that reference to exec() a command. (ex: Runtime.getRuntime().exec("calc.exe"))
+
+______________________________________________________________________
+VI. Object
+-> It is the root class of all classes in java
+
+Q. What are the methods present in Object class
+-> 1. clone()
+2. toString()
+3. wait()
+4. notify()
+5. notifyAll()
+6. equals()
+7. hashCode()
+8. finalize()
+	a. It is called by garbage collector.
+
+** Garbage collector may remove the object without calling the finalize() **
+9. getClass() -> returns a reference of the Class of which an object is.
+
+Q. How can we create an object of any class at runtime, i.e take input from user the name of the class of which object is to be created ?
+-> see "LangDemo.java"
+
+Q. Without using constructor (new keyword), how can I create an object in java?
+-> see "LangDemo.java"s
