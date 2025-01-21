@@ -28,3 +28,47 @@ Package : java.util
 21. SimpleTimeZone
 22. Locale
 32. Currency
+
+__________________________________________________________________
+I. Date Class
+-> See "DateDemo.java"
+__________________________________________________________________
+II. BitSet Class
+-> See "BitSetDemo.java"
+__________________________________________________________________
+III. Collections Classe
+->
+1. Unlike arrays we can change it's size at runtime (dynamically)
+2. Collection interface is the root api for all Collections Classes 
+3. Collection is interface and Collections is Class
+4. Collection is parent Class of Set, List, Queue
+5. In Set, List, Queue we can add one object at a time
+6. While in map on the other side we can add two objects at a time (key, value).
+7. Set, List, Queue, and Map are all interfaces.
+
+8. Set : (Classes which implement Set interface are)
+	a. HashSet (Unordered)-> Stores data based on hashcode generated.
+	b. TreeSet (SortedOrder) -> Uses extra comparision to sort elements, by implementing SortedSet
+	c. LinkedHashSet (Input order) -> 
+
+(***Default logic for HashCode is, for two different objects two different hashcodes will be generated***)
+
+9. List : (Classes which implement List interface are)
+	a. Vector : It is legacy class (removed). It is synchronized.
+		i. Stack
+	b. ArrayList : It is newer version of Vector. It can be used in Multi-threaded environment. Insertion/ Deletion is slower, Traversal is slower.
+	c. LinkedList : Insertion/ Deletion is faster, Traversal is faster.
+
+10. Queue :
+	a. Deque : It is double ended queue, i.e elements can be accessed from both ends. It is only an interface and is implemented by "ArrayDeque" Class. (ex : Lift software)
+	b. PriorityQueue : Elements are sorted.
+
+11. Map :
+	a. Hashtable : Stores data based on hash code generated. It has synchronized methods. It doesn't allow key or value any as null.
+	b. HashMap (unordered) : Stores data based on hash code generated. It does not has any synchronized methods. It can be used in Multi-threaded environment. Also HashMap allows null in key, value.
+	c. TreeMap (sorted order) :
+	d. LinkedHashMap (input order) :
+
+(*** Legacy interface : Enumeration , it is older interface and does work with newer Classes, it had methods like hasMoreElements(), nextElement() ***)
+
+12. Iterator - It is newer interface and supports both older and newer Classes. We can use this interface using "Iterable" Class. So actually it is Iterator which has logic of how to traverse through the elements. It has methods line hasNext(), next(), remove(), and forEachRemaining().
