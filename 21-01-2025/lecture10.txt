@@ -1,0 +1,30 @@
+Date : 21-01-2025
+
+Package : java.util
+
+1. Scanner
+2. Random
+3. Date -> Starting date and time in IT industry : 01/01/1990 00:00:00
+4. Stack
+5. Calendar
+6. GregorianCalendar
+7. Bitset
+
+8. ArrayList
+9. LinkedList
+10. HashSet
+11. HashMap
+12. TreeMap
+13. TreeSet
+14. LinkedHashSet
+15. PriorityQueue
+16. Collections
+
+17. Enumeration
+18. Iterator
+19. Comparator
+
+20. TimeZone
+21. SimpleTimeZone
+22. Locale
+32. Currency

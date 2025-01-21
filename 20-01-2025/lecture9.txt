@@ -60,7 +60,7 @@ ______________________________________________________________
 	Runnable
 	AutoCloseable
 	Iterable
-
+	Comparable
 	_____________
 	java.lang.reflect
 	
