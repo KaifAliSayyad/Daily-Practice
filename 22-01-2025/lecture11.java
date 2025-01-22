@@ -12,3 +12,10 @@ ______________________________________________________________________
 1. This class is also called as Algorithm Class
 2. This is an example of static class, as all the methods inside this class are static.
 3. Comparable is an interface which has compareTo() method declared in it.
+
+
+______________________________________________________________________
+Assignment (worldofsacala.com)
+1. Covariant 
+2. Invariant
+3. Contravariant
