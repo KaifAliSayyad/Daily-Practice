@@ -1,0 +1,66 @@
+Date : 23-01-2025
+
+java.io
+____________________________________________________________________________________________________________________________________________________________
+I. Classes : 
+1. Stream
+2. InputStream
+3. OutputStream
+
+____________________________________________________________________________________________________________________________________________________________II. In java we send and receive data in two formats : 
+1. Bytes	- ASCII (1 byte per character)
+2. Characters	- Unicode (2 bytes per character)
+
+____________________________________________________________________________________________________________________________________________________________III. Therefore in java we have two different Classes to read and write from Byte Stream and from Character Stream
+1. Bytes	- InputStream, OutputStream
+2. Unicode	- Reader, Writer
+(**All these 4 classes are abstract classes.**)
+
+____________________________________________________________________________________________________________________________________________________________IV. As we now know what we need to read (bytes/ Unicode), but we do not know from where we are reading (file, buffer, pipe, sockets..), therefore these classes are made abstract, and we need to use their subclasses to create their object.
+
+	1. InputStream :
+		a. FileInputStream
+		b. BufferInputStream
+		c. PipeInputStream
+		...
+
+	2. OutputStream :
+		a. FileOutputStream
+		b. BufferOutputStream
+		c. PipeOutputStream
+		d. DataOutputStream
+		...
+		e. DataOutput (interface)
+		f. PrintStream
+
+	3. Reader :
+		a. FileReader
+		b. BufferedReader
+		...
+
+	4. Writer : 
+		a. FileWriter
+		b. BufferedWriter
+		....
+		c. PrintWriter
+
+____________________________________________________________________________________________________________________________________________________________
+V. What if we want to read in terms of specific data types. For that purpose we have "DataInput" interface. And it is implemented by "DataInputStream". This DataInputStream extends "InputStream" class (i.e DataInputStream extends InputStream implements DataInput). Similarly we have "DataOutputStream".
+(**These are also called as filter classes**)
+
+____________________________________________________________________________________________________________________________________________________________
+VI. To write to different destinations we have "PrintStream" (bytes) and "PrintWriter" (Unicode) classes. (The classes "DataOutputStream" was for different data types)
+(**To read from different sources we have "BuffereInputStream" (bytes) and "BufferedReader" (Unicode).
+
+____________________________________________________________________________________________________________________________________________________________
+VII. 
+a. Till now we have classes which can only either read or write. But we may need to read and write from/ to a file using only one class. Therefore we have a separate class "RandomAccessFile" class.
+b. This class implements both "DataOutput" and "DataInput" interfaces.
+c. As the class name suggests 'Random-Access', this class can access files from random locations unlike other classes which only allow sequential operations.
+d. More in RandomAccessFile we have modes which can be used to allow only specific mode for reading and writing.
+
+____________________________________________________________________________________________________________________________________________________________
+VIII. There is another class "File" which is not at all used for reading or writing. But it has methods like exists(), createNewFile(), delete(), canWrite(), ifFile(), isDirectory(), mkdir(), list(), length(), isBinary(), rename()
+
+____________________________________________________________________________________________________________________________________________________________
+
