@@ -63,4 +63,10 @@ ________________________________________________________________________________
 VIII. There is another class "File" which is not at all used for reading or writing. But it has methods like exists(), createNewFile(), delete(), canWrite(), ifFile(), isDirectory(), mkdir(), list(), length(), isBinary(), rename()
 
 ____________________________________________________________________________________________________________________________________________________________
+Assignment : 
+1. Add option to save (write) created employees to a file (employees.csv)
+2. Record fields can be separated by ','
+3. Read all the data from the file upon start (Loading...).
+4. Update the record in file after 'raiseSalary()' automatically.
 
+(**See "StringTokenizerDemo.java"**)

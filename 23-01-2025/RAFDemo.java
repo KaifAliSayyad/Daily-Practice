@@ -4,7 +4,7 @@ public class RAFDemo{
 	public static void main(String[] args){
 
 		try{
-			RandomAccessFile raf = new RandomAccessFile("input.txt", "rw");
+			RandomAccessFile raf = new RandomAccessFile("abc.txt", "rw");
 			
 			System.out.println("Reading from input.txt. ");
 			String line = null;
