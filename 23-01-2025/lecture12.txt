@@ -23,6 +23,7 @@ ________________________________________________________________________________
 		b. BufferInputStream
 		c. PipeInputStream
 		...
+		d. ObjectInputStream
 
 	2. OutputStream :
 		a. FileOutputStream
@@ -32,6 +33,7 @@ ________________________________________________________________________________
 		...
 		e. DataOutput (interface)
 		f. PrintStream
+		g. ObjectOutputStream
 
 	3. Reader :
 		a. FileReader

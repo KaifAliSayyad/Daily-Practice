@@ -1,0 +1,17 @@
+Date  : 24-01-2025
+
+By writing directly to a file, we have to come across many issues like security, integrity of data.
+Therefore we use "SERIALIZATION"
+_________________________________________________________________________________________________________________________
+1. We can convert the whole object into byte stream using serialization
+2. **String fields are not serialized.
+3. To convert Object into ByteStream we have a separate class called "ObjectOutputStream".
+4. The Class of whose object we want to serialize should implement java.io.Serializable;
+5. To Deserialize the object we also have a separate class called "ObjectInputStream".
+6. Even if someone modifies the data of the file in which we have saved out byte coded object. While deserializing we will get an exception and we'll know.
+7. If we do not want some attribute to be serialized, we can make it "transient".
+(**By using "transient" that attribute is not persisted at all**);
+8. So while deserializing, whichever value is missing is assigned default value.
+9. On the receiver side, we also need to send .class file of the Class of whose object it is (here :Person).
+10. It will identify the correct .class file using serialVersionUID.
+11. "transient" and "static" are not serialized.
