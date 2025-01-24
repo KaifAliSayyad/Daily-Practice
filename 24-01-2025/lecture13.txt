@@ -15,3 +15,47 @@ ________________________________________________________________________________
 9. On the receiver side, we also need to send .class file of the Class of whose object it is (here :Person).
 10. It will identify the correct .class file using serialVersionUID.
 11. "transient" and "static" are not serialized.
+
+_________________________________________________________________________________________________________________________
+
+Design Principles
+1. DRY - Do not repeat yourself.
+2. KISS	- Keep it simple and stupid/ Straight
+3. SOLID
+	a. (S)ingle Responsibility Principle - Each class should have single purpose.
+	b. (O)pen/ Closed Principle - Open for extension and Closed for Modification. If we want some extra feature added to it, we should create a new class and extend our class and write those new features in that class.
+	c. (L)iskov's Substitution Principle - Suppose in print(Clerk c), or in print(Programmer p), we can only pass either Clerk object or Programmer Object, according to LSP we should declare print(Employee e), such that we can now pass(Substitute) any of the subclass's object.
+	d. (I)nterface Segregation Principle - Don't declare a single large interface, this can create unnecessary havoc of having to create many empty method implementations while implementing the interface, rather segregate that one interface into many small interfaces.
+	e. (D)ependency Inversion Principle - this principle suggests that we should not tight couple the dependencies.
+
+_________________________________________________________________________________________________________________________
+
+Clean Code Practices
+1. Choose noun words as class name.
+2. Choose verbs as method name.
+3. Choose entities on which action is performed or the entities required to perform the action as variable names.
+4. Variables/ Method names start with small letters
+5. Classes/ Enums/ Interface names start with capital letter.
+6. Use CamelCasing.
+7. If package name, all letter should be small.
+8. If constant, all letters should be capital, if more than one word, then should be separated by underscore.
+9. Give clear names.
+10. Write comments. (but avoid redundant comments, Misleading, Journal/ Documentation)
+	a. Single line comment	- It is written using '//'
+	b. Multi line comment	- It is written using '/* */'
+	c. Documentation	- It is written using '/*
+							*
+							*
+							*	
+							*/'
+11. Exception Handling (Both resources based and non-resource based)
+12. Indentation.
+
+_________________________________________________________________________________________________________________________
+
+**Demostration of init block**
+1. It is called everytime an object is created.
+2. It is called before constructor.
+3. "return" is not allowed in init block.
+4. If we have multiple init blocks, compiler will club them into one single init block.
+(**Also we cannot return from static block**)
