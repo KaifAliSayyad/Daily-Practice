@@ -12,3 +12,13 @@ ex : select coalesce(designation, 'Total') , sum(salary) as sum from employees g
 
 VIII. Functions vs Procedures
 IX. PL/SQL for dynamic programming.
+X. Creating procedures and functions.
+XI. using window functions
+XII. cte's
+XIII. Difference between delete and truncate	
+	a. With delete we can delete specific records
+	b. Truncate deletes all the records
+	c. Delete does not reset auto-increment
+	d. Truncate resets auto-increment
+	e. MAJOR difference between DELETE and TRUNCATE is that DELETE can be rollback. 
+	f. TRUNCATE does not come under transaction, it cannot be rollbacked.
