@@ -1,0 +1,14 @@
+DATE : 28-01-2025
+
+I. select statement
+II. group by
+III. aggregate functions
+IV. having
+V. sub-query
+VI. joins
+Q. When to use Sub-query vs JOINS?
+VII. We have an extra feature in PostgreSQL, called ROLLUP()
+ex : select coalesce(designation, 'Total') , sum(salary) as sum from employees group by ROLLUP(designation) order by sum(salary);
+
+VIII. Functions vs Procedures
+IX. PL/SQL for dynamic programming.
