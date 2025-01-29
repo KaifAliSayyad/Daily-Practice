@@ -28,7 +28,10 @@ I. To connect to a database using JDBC we have to follow some steps
 		ResultSet rs = stmt.executeQuery("{select * from db/ etc}");
 --------------------------------------------------------------------------------------------
 II. Types of Statements
-	a. Statement (interface)
+	a. Simple Statement
 	b. PreparedStatment 
 (**The difference between Statement and PreparedStatement is the, when a query is sent q00 times using Statement the Database compiles the query 100 times and executes it 100 times. But while using PreparedStatement when we send a query 100 times, it is compiled only once and later only values are substituted. Therefore, we are saving 99 times of compilation.**)
+	c. CallableStatement
+	d. Batch Statement
+
 
