@@ -1,0 +1,34 @@
+Date : 29-01-2025
+
+JDBC - Java Data Base Connectivity - SunMicrosystem - It is platform independent
+_________________________________________________________________________________________
+ODBC - Open DataBase Connectivity  - Microsoft - It works only on windows OS
+
+(**JDBC only helps us to connect to the database and pass the queries to the database. The Queries are then compiled and executed by Database**);
+-------------------------------------------------------------------------------------------
+I. To connect to a database using JDBC we have to follow some steps
+1. Load/ Register the Driver using ' Class.forName("${driver_class}) '. There are 4 types of drivers : 
+	a. JDBC-ODBC bridge 		(Type 1)
+	b. Part-Java Part-Native 	(Type 2)
+	c. Pure-Native 			(Type 3)
+	d. Pure-Java (THIN)		(Type 4)
+	*From JAVA 8 version, we don't need to explicitly write Class.forName(). The driver class is automatically loaded.
+
+2. Connect to Database/ Establish the connection.
+	a. Connection con = DriverManager.getConnection(url, username, password);
+	b. Check connection using con.isConnected().
+
+3. Create a Statement object
+	- Statement stmt  con.createStatement();
+
+4. Execute Queries. Queries are of further two types
+	a. From the Application to the Database - 
+		stmt.executeUpdate("{insert/ update/ delete..etc}")
+	b. From the Database to the Application - 
+		ResultSet rs = stmt.executeQuery("{select * from db/ etc}");
+--------------------------------------------------------------------------------------------
+II. Types of Statements
+	a. Statement (interface)
+	b. PreparedStatment 
+(**The difference between Statement and PreparedStatement is the, when a query is sent q00 times using Statement the Database compiles the query 100 times and executes it 100 times. But while using PreparedStatement when we send a query 100 times, it is compiled only once and later only values are substituted. Therefore, we are saving 99 times of compilation.**)
+
