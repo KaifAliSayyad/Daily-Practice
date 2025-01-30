@@ -34,7 +34,7 @@ public class ResultSetDemo{
 		while(rs.previous()){	
 			System.out.println("Name\t: "+rs.getString(1));
 			System.out.println("Age\t: "+rs.getInt(2));
-					System.out.println("--------------------------------------------------");
+			System.out.println("--------------------------------------------------");
 
 		}
 

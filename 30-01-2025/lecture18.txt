@@ -5,3 +5,27 @@ II. Types of ResultSets (See "ResultSetDemo.java")
 	a. Forward only
 	b. updatable
 	c. scrollable
+
+-------------------------------------------------------------------------------------------------------------
+Assignment
+EMPLOYEE (EID, NAME, AGE, SALARY, BASIC, HRA, TA, DA, PF, DESIGNATION, DEPARTMENT, HOD) - Normalize this table and give explanation for each normalization
+
+-------------------------------------------------------------------------------------------------
+1NF : Already in 1NF as all cells contain atomic value.
+EMPLOYEE (EID, NAME , AGE, SALARY, BASIC, HRA, TA, DA, PF, DESIGNATION, DEPARTMENT, HOD)
+-------------------------------------------------------------------------------------------------
+2NF - 	
+
+EMPLOYEE (EID, NAME, AGE, DESIGNATION, DEPARTMENT_ID (fk))
+SALARY_DETAILS(EID (fk), TOTAL_SALARY , BASIC, HRA, TA, DA, PF)
+DEPARTMENT(DEPARTMENT_ID, (fk), DEPARTMENT_NAME, HOD)
+
+With this we have insertion anamoly, for example we have to delete all the employees with same designation then that designation would be lost.
+-------------------------------------------------------------------------------------------------
+3NF - Salary and it's components are non-prime attribute which are dependent on non-prime attributes of the table.
+
+EMPLOYEE (EID, NAME, AGE, SALARY (fk), DESIGNATION_ID (fk) , DEPARTMENT_ID (fk))
+SALARY_DETAILS(EID (fk), TOTAL_SALARY , BASIC, HRA, TA, DA, PF)
+DEPARTMENT(DEPARTMENT_ID, (fk), DEPARTMENT_NAME, HOD)
+DESIGNATION(DESIGNATION_ID (pk), DESIGNATION_NAME)
+
