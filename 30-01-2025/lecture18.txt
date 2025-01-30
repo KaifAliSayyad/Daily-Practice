@@ -1,0 +1,5 @@
+Date : 30-01-2025
+
+I. Remembering OOP and Design Patterns in real world scenario.
+II. Types of ResultSets (See "ResultSetDemo.java")
+	a. 
