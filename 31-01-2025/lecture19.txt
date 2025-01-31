@@ -1,0 +1,98 @@
+Date : 31-01-2025
+
+I. RowSet Types
+	a. CachedRowSet
+	b. JdbcRowSet
+	c. FilteredRowSet
+	d. JoinRowSet
+
+	e. WebRowSet
+
+II. SQL				vs 		No-SQL
+   a. Schema table				Schema less
+   b. Ordered					Unordered
+   c. Tables					Collections
+   d. Row/ Records				Document
+   e. Fields, Columns				Key:Value pair
+   
+III. Mongo
+a. Using Mongo shell
+	i. First start the server : 
+		1. It first required you to create data/db folder in the root directory of the current drive.
+		2. Then go to mongo server's bin folder and run 'mongod.exe' file using command prompt
+	ii. Then start the client : 
+		1. Go to mongo shell's bin folder and run 'mongosh.exe' using command prompt.
+	iii. To list the databases 'show dbs'. This will show only the databases which contain at least one collection.
+	iv. 'switch dbName' to switch to database. This will automatically create a database with 'dbName' if not already present.
+	v.  'show collections' to list all the present collections present in current db.
+	vi. Use short-hand notation 'db' to reference Database.
+	vii. Using db.Employee.insertOne({'name' : 'Raju', 'age' : 25}) to insert one record at a time in Collection Employee.
+	viii. To list all the documents in a collection use 'db.Employee.find()'
+	ix. Using complex query. Everything should be in json (key:value) format.
+		for example :  db.Employee.find({$or : [{'designation' : 'PROGRAMMER'}, {'age' : {$gt : 35} } ]})
+	x. To update use " db.Employee.updateMany({'name' : 'Raju'}, {$set : {'salary' : 100100}})"
+	xi. Demonstration of using find() along with selection of columns.
+{
+	db.Employee.find({}, {'_id' : 0})
+	[
+	  { name: 'Raju', age: 25, salary: 100100 },
+	  { name: 'Manju', age: 35 },
+	  { name: 'Suman', age: 23, salary: 100000, designation: 'PROGRAMMER' },
+	  { name: 'Dinesh', age: 33, salary: 30000, designation: 'TESTER' },
+	  { name: 'Manisha', age: 43, salary: 40000, designation: 'MANAGER' },
+	  {
+	    name: 'Prashant',
+	    age: 26,
+	    salary: 100000,
+	    designation: 'PROGRAMMER'
+	  },
+	  { name: 'Pooja', age: 21, salary: 18871, designation: 'TESTER' }
+	]
+	demodb> db.Employee.find({}, {'_id' : 0, 'name' : 1, 'age' : -1})
+	[
+	  { name: 'Raju', age: 25 },
+	  { name: 'Manju', age: 35 },
+	  { name: 'Suman', age: 23 },
+	  { name: 'Dinesh', age: 33 },
+	  { name: 'Manisha', age: 43 },
+	  { name: 'Prashant', age: 26 },
+	  { name: 'Pooja', age: 21 }
+	]
+}
+	
+	xii. Also we can use with .limit(10) to limit the number of rows.
+	xiii. Also using .skip(2)
+{
+	db.Employee.find({}, {'_id' : 0, 'name' : 1, 'age' : -1}).limit(5)
+	[
+	  { name: 'Raju', age: 25 },
+	  { name: 'Manju', age: 35 },
+	  { name: 'Suman', age: 23 },
+	  { name: 'Dinesh', age: 33 },
+	  { name: 'Manisha', age: 43 }
+	]
+	demodb> db.Employee.find({}, {'_id' : 0, 'name' : 1, 'age' : -1}).skip(2)
+	[
+	  { name: 'Suman', age: 23 },
+	  { name: 'Dinesh', age: 33 },
+	  { name: 'Manisha', age: 43 },
+	  { name: 'Prashant', age: 26 },
+	  { name: 'Pooja', age: 21 }
+	]
+	demodb> db.Employee.find({}, {'_id' : 0, 'name' : 1, 'age' : -1}).skip(-2)
+	MongoServerError[BadValue]: BSON field 'skip' value must be >= 0, actual value '-2'
+	demodb> db.Employee.find({}, {'_id' : 0, 'name' : 1, 'age' : -1}).skip(2).limit(5)
+	
+	[
+	  { name: 'Suman', age: 23 },
+	  { name: 'Dinesh', age: 33 },
+	  { name: 'Manisha', age: 43 },
+	  { name: 'Prashant', age: 26 },
+	  { name: 'Pooja', age: 21 }
+	]
+}
+	
+	xiv: Using .sort({'age' : 1})
+	xv: To delete a record using db.Employee.deleteOne({'age' : {$lte : 21}}), db.Employee.deleteMany({'age' : {$lte : 21}})
+	xvi: To delete a collection use 'db.Employee.drop()'
+	xvii: To delete a database use 'db.dropdDatabase()'	
