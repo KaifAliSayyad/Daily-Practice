@@ -13,3 +13,43 @@ Getting started with Spring
 8. Writing to Documents
 9. Using "Projection" to exclude specific fields (Bson projection = Projections.exclude("_id", "age",..); OR
 						  Bson projection = Projecttions.include("name");)
+
+-------------------------------------------------------------------------------------------------------
+Advanced Java Features
+1. record
+2. Enum
+3. for-each-loop
+4. try-with-resources
+5. Sealed classes
+6. interface with multiple with body
+7. Function interface
+8. Lambda expression
+9. Method references
+10. forEach() method
+11. Date & Time API
+12. Optional API
+
+-------------------------------------------------------------------------------------------------------
+
+I. from java version 8. interface can have any method which is static. As main method is static it can also be written in an interface. Therefore, we do need to make a class for this interface. See "InterfaceDemo.java".
+II. Functional Interface :
+	a. Wrong Defination : An interface with only one abstract method.
+	b. Correct Defination : An interface of which only one method has to be implemented is called as Functional Interface.
+III. In whichever class we are creating anonymous inner class of any class, the .class file is created with the name of the declaring outer class and not the name of the class we are creating inner class of. for example: 
+{
+	class B{
+	}
+
+	class OuterClass{
+		psvm(){
+			B b = new B(){
+
+			}
+		}
+	}
+
+	/* In the above code. The class name for anonymous inner class of B will be OuterClass$1.class and not B$1.class */
+
+IV. We can always use the annotation '@FunctionalInterface' above interface definition, to ensure that the interface we are creating is a functional interface.
+V. One of the main reasons for the creation of the functional interface was "SECURITY". Because let's say we have some confidential logic in a method. And we are creating an object of the class with that method, there will be residual .class file, whether it be a different class or anonymous class. So we can decompile that .class file and retrieve that logic on the client side.
+}
