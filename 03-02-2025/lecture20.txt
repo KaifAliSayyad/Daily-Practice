@@ -1,0 +1,15 @@
+Date: 03-02-2025
+
+Getting started with Spring
+-----------------------------------------------------------
+
+1. Setting up Spring tools
+2. Selecting path
+3. Creating a new Maven Project
+4. Creating a class in project
+5. Connecting to database see "mongodb.MongoDBOpearations.java"
+6. Accessing the collections
+7. Reading from Documents (FindIterable<Document> i = collection.find());
+8. Writing to Documents
+9. Using "Projection" to exclude specific fields (Bson projection = Projections.exclude("_id", "age",..); OR
+						  Bson projection = Projecttions.include("name");)
