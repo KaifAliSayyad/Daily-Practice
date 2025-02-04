@@ -1,0 +1,19 @@
+Date : 04-02-2025
+
+--------------------------------------------------------------------------------------------------------------
+I. Need of Lambda Expressions
+	a. Security
+	b. To avoid multiple object creation by passing as an argument to a function.
+
+--------------------------------------------------------------------------------------------------------------
+II. MethodReferences
+	a. See 'MethodReferences.java'
+
+--------------------------------------------------------------------------------------------------------------
+III. .forEach() method 
+	a. See 'ForEachMethod.java'
+--------------------------------------------------------------------------------------------------------------
+Iv. Predicates
+	a. See 'PredicateDemo.java'
+	b. Need : let's say I have a function called evenNumber(int[]) which prints all the evenNumbers in an arr
+		Now if I want to change it to print odd numbers I'll have to create a new function called oddNumbers. Also if I want to switch the logic for this method for numbers > 50 I can't. So to solve this problem we have predicated in java. 'Predicate' class has a method 'test()' which is abstract and need to be implement.
