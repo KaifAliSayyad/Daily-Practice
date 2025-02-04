@@ -13,7 +13,17 @@ II. MethodReferences
 III. .forEach() method 
 	a. See 'ForEachMethod.java'
 --------------------------------------------------------------------------------------------------------------
-Iv. Predicates
+IV. Predicates
 	a. See 'PredicateDemo.java'
 	b. Need : let's say I have a function called evenNumber(int[]) which prints all the evenNumbers in an arr
-		Now if I want to change it to print odd numbers I'll have to create a new function called oddNumbers. Also if I want to switch the logic for this method for numbers > 50 I can't. So to solve this problem we have predicated in java. 'Predicate' class has a method 'test()' which is abstract and need to be implement.
+		Now if I want to change it to print odd numbers I'll have to create a new function called oddNumbers. Also if I want to switch the logic for this method for numbers > 50 I can't. So to solve this problem we have predicated in java. 'Predicate' class has a method 'test()' which is abstract and need to be implement.	
+
+--------------------------------------------------------------------------------------------------------------
+Assignment  : Postgresql
+Order Table
+-------------------------
+product_id	product_name	quantity	date 
+
+Output:		Year	Quantity	product_name
+Use pivot and unpivot concept
+keyword for pivot in postgre is crosstab
