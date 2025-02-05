@@ -30,3 +30,11 @@ II. Optional API
 
 --------------------------------------------------------------------------------------------------------
 III. JAVA Engine cannot run JavaScript. So we need JavaScript engine "Nashorn" to run js code from within java program.
+
+--------------------------------------------------------------------------------------------------------
+IV. Date Modelling Patterns
+	a. Normalization
+	b. Entity- Attribute value representation	
+	c. Different ways of representing History
+	d. Represent Hierarchical data - 2 scenarios (discuss problem statement, sol, how it solves the problem, etc)
+	e. Semi-structured data using JSON - legal documents, missing data.
