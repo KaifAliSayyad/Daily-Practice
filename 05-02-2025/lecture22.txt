@@ -1,0 +1,32 @@
+Date : 05-02-2025
+--------------------------------------------------------------------------------------------------------
+I. Date & Time API
+
+	a. Problems in  java.util.Date;
+		i. Date class here also gives time.
+		ii. Indexing of months starts from 0.
+		iii. It does not supports milliseconds.
+		iv. It has time-zones but they are not live time-zones. As time-zones keep shifting)
+
+	b.  To overcome this major problem of time-zones. We have library called 'joda-time'. They are responsible for maintaining time-zones.	
+
+	c. As the features from joda were more useful they've migrated it into Java 8. So we do not need to explicitly add the dependency in our project and directly use 'java.time' library.
+
+	d. Classes in java.time : 
+		i. LocalDate : The constructor of this class is made private and Date object needs to be created only using .now() method.
+		ii. LocalTime : The constructor of this class is made private and Date object needs to be created only using .now() method. We can get time upto nano seconds using this LocalTime class.
+		iii. LocalDateTime : The constructor of this class is made private and Date object needs to be created only using .now() method. This gives both date and time.
+	
+	e. Methods in LocalDate : 
+		i. ld.withMonth({1-12}), ld.withMonth(Month.MARCH.getValue())
+		ii. static method : LocalDate.of(1983, Month.SEPTEMBER,17) -> 1983-09-17
+--------------------------------------------------------------------------------------------------------
+II. Optional API
+
+	a. Need :
+		i. As java is not pure Object Oriented because of primitive data types. And those data types have respective wrapper classes. But 'null' is the only type which does not have any Wrapper class. So we have a class "Optional" as a wrapper class for null.
+	b. Therefore it is a standard practice to declare argument or return type as Optional wherever you feel it could be null.
+	c. (See OptionalDemo.java) We can create an Optional Object of Integer class and initialize it by using .ofNullable({num}) method so that we know that it may be null and needs to be handled. Then we can handle it appropriately using o1.orElse(0). 
+
+--------------------------------------------------------------------------------------------------------
+III. JAVA Engine cannot run JavaScript. So we need JavaScript engine "Nashorn" to run js code from within java program.
