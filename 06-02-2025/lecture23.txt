@@ -1,0 +1,28 @@
+Date  : 06-02-2025
+
+I. Stream API in JAVA
+	a. Need : If we want to perform 3 operations on a collection object which has 100k elements, traditionally we would've need to iterate through these objects 300k times to perform 3 operations while creating variables to store intermediate results. With Stream API we can perform multiple operations on an element in single iteration so it saves us 200k iterations also no intermediate result is needed to be handled, so streams are faster and memory efficient.
+	b. There are two types of streams
+		i. Sequential - By default the stream is sequential
+		ii. Parallel
+	c. Working with streams requires 3 phases
+		i. Initialization	: Converting Collection object in Stream object : Methods -> stream(), parallelStream(), etc.
+		ii. Processing		: Gives Stream object from Stream obejct : Methods -> filter(), map(), etc.
+		iii. Termination 	: Converts Stream object into Collection object : Methods -> collect(), reduce(), etc.
+	d. See "StreamDemo.java"
+	e. See also "javap java.util.stream.Stream"
+	f. Operation			Input			Output
+	   --------------	   --------------- 	-------------------
+	   map				n			n
+	   filter			n			<=n
+	   reduce			n 			1
+	
+	g. Using .reduce()
+		i. While using .reduce((a, b) -> a +b)...In the first iteration the sum of a and b (a+b) is stored in a for next iteration and the smartly added with next element stored in b. 
+		ii. By default for the first iteration a is initialized to '0', we can also set a using the following syntax .reduce(10, (a,b) ->a+b).
+		iii. Further we can also perform multiple operations on an element in a single reduce using following syntax .reduce((a, b) -> a+b, (a,b) -> a+*b), but this is by default sequential stream and the above reduce will by default get only one element at a time, so the second operation (a*b) is not performed. Therefore first we need to convert it into parallelStream().
+		iv. We can generate streams in various ways for ex : IntStream().range(x, y), .stream(), .parallelStream(), .ints() {multiple methods are present like this in java.util.Random}, Stream.of({int arr})
+		v. To find the statistics for the given stream we have inbuilt class "IntSummaryStatistics"
+
+	h. Working with map and Streams - Maps cannot be directly converted into stream. Therefore first we need to get map.entrySet() and then use .stream() on it to get stream of the map.
+	i. To work with multiple sources for example multiple streams we need to concatenate them into list<list<stream>> and the stream the each individual list to stream and then convert them into streams and merge into one single stream using .flatMap(lst -> lst.stream()) (See 'StreamDemo2.java')
