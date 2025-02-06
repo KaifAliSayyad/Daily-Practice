@@ -26,3 +26,24 @@ I. Stream API in JAVA
 
 	h. Working with map and Streams - Maps cannot be directly converted into stream. Therefore first we need to get map.entrySet() and then use .stream() on it to get stream of the map.
 	i. To work with multiple sources for example multiple streams we need to concatenate them into list<list<stream>> and the stream the each individual list to stream and then convert them into streams and merge into one single stream using .flatMap(lst -> lst.stream()) (See 'StreamDemo2.java')
+	j. Working with more complex Objects and Stream (See 'StreamDemo3.java')
+--------------------------------------------------------------------------------------------------------------
+Assignment : 
+Student
+-------------------------
+rollNo
+name
+age
+school
+standard
+gender
+percentage
+
+Q1. How many students in each standard?
+Q2. How many students male/ female ?
+Q3. How many failed and passed ? (>40) {1. Overall, 2. Schoolwise}
+Q4. Top 3 students overall {1. Overall, 2. Schoolwise}
+Q5. Top scorer school wise
+Q6. Average age of male and female
+Q7. Total fees pending school wise
+Q8. Total number of students in university
