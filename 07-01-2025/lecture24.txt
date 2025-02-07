@@ -1,0 +1,35 @@
+Date  : 07-02-2025
+
+I. Concurrent Programming
+	a. Semaphore class
+		i. Semaphore sem = new Sempahore({number of thread allowed at once in critical section})
+		ii. sem.acquire() is used to acquire a lock
+		iii. sem.release() is used to release a lock
+
+	b. If we have a requirement where threads can access critical section in any order or at any time. But they should only exit at once. i.e Every thread should finish at the same time. For this purpose we have a class called "Phaser"
+	c. Phaser
+
+	d. Cyclic Barrier
+
+	e. Exchanger
+
+	f. CountDownLatch
+
+	g. When a thread is started using t.start() it cannot be reused and started again. But it's object still occupies space in memory. Therefore, we have to come up 'ExecutorServiceFramework'
+		i. In this we create multiple threads without logic and put them into Thread pool.
+		ii. Then we submit a task to a Thread pool rather than to a thread.
+		iii. Then whichever thread is available starts executing that task.
+		iv. After executing the logic of the task, the thread is available again.
+		iv. There are 4 types of Thread Pool : 
+			1. Single : Only one thread in a thread pool.
+			2. Fixed  : Fixed number of threads in a thread pool.
+			3. Dynamic/ Cached : No threads are created in the thread pool by default. Whenever first task is submitted to the thread pool. It'll create a new thread. Then for the next task if no thread is available, it'll create a new thread. A thread by default waits for 1 min, if no task is allocated then it is removed from the thread pool.
+			4. Scheduled/ Timed : 	
+				* Fixed Interval : Threads are created in fixed intervals.
+				* Fixed Delay    : Thread is given rest of delay milliseconds after completing a task.
+			5. Custom
+
+	h. Executors - Create/ Choose the Thread pool
+	i. Executor  - It is an interface. Used for submitting the Runnable Task.
+	j. ExecutorService - This class implements Executor and has method "execute()".	Used to submit the tasks/ manage the thread pool.
+	k. Also we cannot return from a thread which implements 'Runnable'. Therefore to return from a thread we need to implement "Callable"
