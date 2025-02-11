@@ -70,3 +70,16 @@ PMT (Project Management Tool)
    c. Then use 'mvn deploy'.
 
 9. To create the documentation for our project use 'mvn site'. It can be seen in "\demo\target\site\index.html".
+
+10. What is scope of a dependency in Maven project.
+-> a. There are some files which I do not need at compile time (ex: annotation), or some jar files which I only need during test phase.
+   b. Therefore, we can also define the scope of a dependency.
+   c. Types of Scopes:
+	i. compile (default)
+	ii. import - The import scope can be used to include dependency management information from a remote POM into the current project.
+	iii. provided - To specify that this is the jar file which contains only interfaces and not implementations.
+	iv. runtime - To specify that this dependency is only needed at runtime.
+	v. system - To specify the path of the jar file (if not present in .m2 folder)
+		* <scope>system</scope>
+		* <systemPath>C:\Users\Wissen</systemPath>
+	vi. test - To specify that this dependency is only needed at test phase.
