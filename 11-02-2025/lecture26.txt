@@ -58,7 +58,9 @@ PMT (Project Management Tool)
 	i. [INFO] Installing C:\Users\Wissen\Desktop\Training\Daily-Practice\11-02-2025\demo\pom.xml to C:\Users\Wissen\.m2\repository\com\demo\1.0-SNAPSHOT\demo-1.0-SNAPSHOT.pom
 	ii. [INFO] Installing C:\Users\Wissen\Desktop\Training\Daily-Practice\11-02-2025\demo\target\demo-1.0-SNAPSHOT.jar to C:\Users\Wissen\.m2\repository\com\demo\1.0-SNAPSHOT\demo-1.0-SNAPSHOT.jar
    d. This shows that we now have a folder with name <artifactId> in our .m2 repository (local repository).
-   e. To reset everything in the project use 'mvn clean' (This will not after src folder)
+   e. To reset everything in the project use 'mvn clean' (This will not after src folder).
+   f. To see all the available lifecycle phases use some wrong phase like 'mvn build'. It will give below output.
+       Available lifecycle phases are: pre-clean, clean, post-clean, validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy, pre-site, site, post-site, site-deploy.
 
 (**Meaning of when we wrote 'step-by-step' in Maven. This was reference for the phases of Maven project. Even if we run 'mvn package' without before running 'mvn validate' , 'mvn compile' , 'mvn test' , it will automatically run the commands before 'mvn package' step-by-step then run 'mvn package'.**)
 
@@ -66,3 +68,5 @@ PMT (Project Management Tool)
 -> a. For this we need a domain with should be authenticated and verified that it is owned my you.
    b. Then we need to add parameters.
    c. Then use 'mvn deploy'.
+
+9. To create the documentation for our project use 'mvn site'. It can be seen in "\demo\target\site\index.html".
