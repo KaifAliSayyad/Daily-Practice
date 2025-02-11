@@ -1,0 +1,68 @@
+Date : 11-02-2025
+
+-------------------------------------------------------------------------------------------------------------
+PMT (Project Management Tool)
+* POM (Project Object Management/ Model)
+(pom.xml)
+
+1. What is the functionality of PMT ?
+-> a. It should be able to validate project structure.
+   b. Dependency management.
+   c. It should be able to Compile the project
+   d. It should be able to Test & generate test reports.
+   e. It should be able to generate .jar files
+   f. It should be able to make .jar files as Reusable entities.
+
+2. What are the examples of Project Management Tools ?
+-> a. Ant
+   b. Maven	(pom.xml, XML, step-by-step)
+   c. Gradle	(build.gradle,Groovy, Dynamic)
+   d. etc....
+
+3. Discussion about Maven.
+-> a. It has it's own  architecture (See 'Maven.png') .
+   b. It is client-server architecture.
+   c. On the Client side we have '.m2' and on the server side we have 'mvnrepository'.
+   d. If any kind of dependency is required, then we need to add it into pom.xml.
+   e. After adding the dependency to the pom.xml, it first searches the local repository, if the dependency is found it is loaded.
+   f. If the dependency is not found in local repository, then it goes to the mvnrepository on the internet, and then first downloads the depedency in the local repository, then it uses that dependency from the local repository.
+   g. It is provided by apache.
+
+4. Maven Artifacts/ Properties/ Attributes
+-> a. Archetype - What is the type of project we want to generate. (default : maven-archetype-quickstart)
+   b. artifactId - Name of the project.
+   c. groupId - To group the set of elements, Artifact ID and Group ID together makes the project name unique.
+   d. Package - It is to specify what kind of packaging we need.
+   e. version - Version (ex : 1.0 SNAPSHOT). (SNAPSHOT means it is under development environment). So when it is complete developing, we remove SNAPSHOT and keep just 1.0.
+
+5. MVN command to generate mvn porject with default archetype.
+-> 1. mvn archetype:generate
+   2. select archetype (for default press enter)
+   3. groupdId : com
+   4. artifactId : demo
+   5. version (1.0 SNAPSHOT) : {press enter for default}
+   6. package : com
+   7. Confirm properties configuration (Press 'Y').
+   8. Project has been created with folder name as <artifactId> (To see folder structure, go the project's folder and type "tree /f" in cmd).
+ 
+6. MVN project Phases.
+-> a. Validate - TO validate the project structure. Go to the project's folder and type 'mvn validate'
+   b. Compile - Then to compile use 'mvn compile'(This will generate a target folder in the project's root directory containing .class files).
+   c. Test - To run the test cases and generate report (for failed test cases) use 'mvn test'
+   d. Package - To pack all the code into a .jar file use 'mvn package' (See 'beforePackage.png' and 'afterPackage.png').
+
+7. Now we have the .jar file of our project and we want to install that project on our system.
+-> a. To do this we'll need to either use 'setpath' to set the path to our .jar file and then use it.
+   b. Rather we have a simpler way of doing this, we can use 'mvn install' to install the current project's .jar file into local repository i.e .m2. 
+   c. **message after using 'mvn install'***
+	i. [INFO] Installing C:\Users\Wissen\Desktop\Training\Daily-Practice\11-02-2025\demo\pom.xml to C:\Users\Wissen\.m2\repository\com\demo\1.0-SNAPSHOT\demo-1.0-SNAPSHOT.pom
+	ii. [INFO] Installing C:\Users\Wissen\Desktop\Training\Daily-Practice\11-02-2025\demo\target\demo-1.0-SNAPSHOT.jar to C:\Users\Wissen\.m2\repository\com\demo\1.0-SNAPSHOT\demo-1.0-SNAPSHOT.jar
+   d. This shows that we now have a folder with name <artifactId> in our .m2 repository (local repository).
+   e. To reset everything in the project use 'mvn clean' (This will not after src folder)
+
+(**Meaning of when we wrote 'step-by-step' in Maven. This was reference for the phases of Maven project. Even if we run 'mvn package' without before running 'mvn validate' , 'mvn compile' , 'mvn test' , it will automatically run the commands before 'mvn package' step-by-step then run 'mvn package'.**)
+
+8. Now rather if we want to deploy our project to remote repository (mvnrepository.com)
+-> a. For this we need a domain with should be authenticated and verified that it is owned my you.
+   b. Then we need to add parameters.
+   c. Then use 'mvn deploy'.
