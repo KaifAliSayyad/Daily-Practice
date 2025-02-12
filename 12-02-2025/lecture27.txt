@@ -1,0 +1,70 @@
+Date  : 12-02-2025
+
+TESTING
+1. Types of Testing
+	a.
+		i. Unit Testing
+		ii. Integration Testing
+		iii. Functional Testing
+		iv. Non-functional Testing
+		v. Acceptance Testing
+		vi. Load Testing
+		vii. Performance Testing
+		viii. Feasibility Testing
+		ix. Validation Testing
+		x. Compatibility Testing
+		xi. etc...
+
+	b.
+		i. Black Box Testing
+		ii. White Box Testing
+		iii. Sand Box Testing
+		iv. Grey Box Testing
+
+	c.
+		i. Manual Testing
+		ii. Automation Testing
+	
+	d.
+		i. Alpha Testing
+		ii. Beta Testing
+
+2. Tools for each type of Testing
+	i. Unit Testing -  JUnit
+	ii. Integration Testing - Mockito
+	iii. End-to-End - Selenium (Automation)
+	iv. Others - TestNG, Jest, WebUnit, HttpUnit, Geb, Spock, etc..
+
+3. JUnit
+	a. Versions
+		i. JUnit 3
+		ii. JUnit 4
+		iii. JUnit 5 (Jupiter) - 
+			* Lambda Expression
+			* Multiple new Patterns
+			* Microservices
+			* Many new features
+
+4. More Terminologies - 
+	i. Test Suite
+	ii. Test Case
+	iii. Test Steps
+
+5. See (JUint.png)
+6. See (JUnitDemo)
+7. Learning JUnit
+	a. We can create new JUnit test class (suite) by right clicking and selecting new file -> JUnit class -> <Class_name>. (We can also select the methods for which we want to create test case)
+	b. A new JUnit test class will be created.
+	c. Each case can contain multiple test steps, similarly each test suite can contain multiple test cases.
+	d. Using assertTrue(<boolean_condition>), we can check whether a given condition asserts true or not.
+	e. Using fail(<message>), we can fail the current test case.
+	f. Using assertEquals(<expected>, <actual>, () -> <message>), we can check if actual and expected are same or not, if not then execute the give lambda function.
+	g. Using assertThrows(<expected_expection_class>.class, () -> <actual>), we can check if the given lambda function throws the expected exception or not.
+	h. **It is compulsory to add "@Test" annotation to the test case (method), to run it as a test case, or else it won't run as test case.**
+	i. Using assertAll(() -> assert<Equals/ True>());, we can pass multiple assertion test steps in same test case.
+	j. More annotations :
+		i. @BeforeAll : This method should be static and is run before running test cases.
+		ii. @AfterAll : This method should be static and is run after running test cases.
+		iii. @BeforeEach : This method is run before running each test case.
+		iv. @AfterEach : This method is run after running each test case.
+		v. @DisplayName : Syntax : "@DisplayName("This is for testing Add method")", using this we can give names to the test cases.
