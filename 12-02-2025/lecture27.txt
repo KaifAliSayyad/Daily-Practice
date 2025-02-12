@@ -51,20 +51,64 @@ TESTING
 	iii. Test Steps
 
 5. See (JUint.png)
+
 6. See (JUnitDemo)
+
 7. Learning JUnit
 	a. We can create new JUnit test class (suite) by right clicking and selecting new file -> JUnit class -> <Class_name>. (We can also select the methods for which we want to create test case)
+
 	b. A new JUnit test class will be created.
+
 	c. Each case can contain multiple test steps, similarly each test suite can contain multiple test cases.
+
 	d. Using assertTrue(<boolean_condition>), we can check whether a given condition asserts true or not.
+
 	e. Using fail(<message>), we can fail the current test case.
+
 	f. Using assertEquals(<expected>, <actual>, () -> <message>), we can check if actual and expected are same or not, if not then execute the give lambda function.
+
 	g. Using assertThrows(<expected_expection_class>.class, () -> <actual>), we can check if the given lambda function throws the expected exception or not.
+
 	h. **It is compulsory to add "@Test" annotation to the test case (method), to run it as a test case, or else it won't run as test case.**
+
 	i. Using assertAll(() -> assert<Equals/ True>());, we can pass multiple assertion test steps in same test case.
+
 	j. More annotations :
-		i. @BeforeAll : This method should be static and is run before running test cases.
-		ii. @AfterAll : This method should be static and is run after running test cases.
+		i. @BeforeAll : This method should be static and is run before running test cases. When @TestInstance(Lifecycle.PER_CLASS) is the defined annotation, then making this method static is not required as only one Object of this Test class will be created.
+		ii. @AfterAll : This method should be static and is run after running test cases. When @TestInstance(Lifecycle.PER_CLASS) is the defined annotation, then making this method static is not required as only one Object of this Test class will be created.
 		iii. @BeforeEach : This method is run before running each test case.
 		iv. @AfterEach : This method is run after running each test case.
 		v. @DisplayName : Syntax : "@DisplayName("This is for testing Add method")", using this we can give names to the test cases.
+		vi. @EnabledOnJre : Syntax : "@EnabledOnJre(value = JRE.JAVA_8)", using this we can specify that the test case should only run on specified Java version.
+		vii. @EnabledForJreRange : Syntax : "@EnabledForJreRange(min = JRE.JAVA_8, max = JRE.JAVA_15), using this we can specify that this test case should run only for Java versions within the given range.
+		viii. @EnabledOnOs : Syntax : "@EnabledOnOs(value = {OS.LINUX, OS.MAC})", using this we can specify that this test case should only run for given Operating Systems.
+		ix. ***(Imp) @TestInstance : Syntax "@TestInstance(Lifecycle.PER_CLASS)", using this annotation we can specify that this class (suite) is meant for testing, if we do not mention this annotation it is by default "@TestInstance(Lifecycle.PER_METHOD)" because of which our Test class will be created everytime for each method.
+		x. @Tag : Syntax : "@Tag(<tag_name>), using this we can categorize tests into categories. And at the time of execution we can go to Run Configurations -> Configure and then include or exclude tags.
+		xi. @Tags : Syntax : "@Tags(value = {@Tag(), @Tag(),..}), using this we can add test into multiple. And at the time of execution we can go to Run Configurations -> Configure and then include or exclude tags.
+		xii. @RepeatedTest : Syntax : "@RepeatedTest(<number_of_times>), using this annotation we can run the test case multiple number of times.
+		xiii. (**See more "@Enabled..." annotations**).
+	
+8. The practice of writing Test case before implementation is called as TDD (Test Driven Development).
+
+9. What is difference between assertion ans assumption?
+-> a. Assertion is to test the function.
+   b. But Assumption is a call whether to assert/ test or not at Runtime.
+
+
+--------------------------------------------------------------------------------------------------------------
+Notes :
+1. DLL - Dynamically Linked Libraries (Only on Windows)
+
+--------------------------------------------------------------------------------------------------------------
+Assignment
+interface A{
+	public void xyz();
+}
+
+class Abc implements A{
+	public void xyz();
+}
+
+* How to test a method which has return type void ? 
+* How to test an interface without having an access to it's implementation ? 
+* How to test for a method being called exactly for 3 times ?
