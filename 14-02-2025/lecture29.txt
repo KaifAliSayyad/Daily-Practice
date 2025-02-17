@@ -1,0 +1,6 @@
+Date : 14-02-2025
+
+Docker
+--------------------------------
+1. VM vs Containerisation
+2. Docker Architecture (See 'docker_architecture.png')

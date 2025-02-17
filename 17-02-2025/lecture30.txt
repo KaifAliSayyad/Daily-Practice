@@ -1,0 +1,49 @@
+Date : 17-02-2025
+
+I.Frameworks
+-> 1. What are frameworks?
+	They are predefined implementations of design patterns.
+----------------------------------------------------------------------------------------------------------------
+II. Spring Frameworks
+1. Spring Core -> main core of Spring
+2. Spring Web MVC
+3. Spring REST
+4. Spring Data JPA
+5. Spring Test
+6. Spring AOP
+etc...
+
+-----------------------------------------------------------------------------------------------------------------
+III. Spring Core
+DI - Dependency Injection -> When we are creating some object and it has some dependencies, then DI ensures that these dependencies are automatically injected. This design pattern is called as Dependency Injection. For example, if I am asking for a car, then 4 wheels, 4 doors, Engine, etc.. should be automatically injected.
+IOC - Inversion of Control - It is a principal on the other hand. It states that previously the developer had control of the decisions of when to make objects, what objects should be made...but it states that this control is inverted to the container.
+
+-----------------------------------------------------------------------------------------------------------------
+IV. DI Types
+1. Constructor Injection
+2. Setter Injection
+3. Field Injection
+
+-----------------------------------------------------------------------------------------------------------------
+V. IOC Types
+1. BeanFactory --faster
+2. ApplicationContext --extension of beanfactory
+
+-----------------------------------------------------------------------------------------------------------------
+VI. Spring Boot
+1. Autoconfiguration -> If we require multiple annotations for multiple configurations, autoconfiguration means that now we have to write only one configuration for all of them combined.
+2. Spring Initializer/ Started Kit -> Now we can just not care about dependencies' versioning, as we have spring initializer to care about it. We can also set Spring required version
+3. Embedded Server
+4. Inbuilt H2 DB
+5. Actuators - Health Checkups
+6. Microservices
+etc...
+-----------------------------------------------------------------------------------------------------------------
+**BY default for creating an object the default type of injection is Constructor injection.**
+**BY default for setting the default values while creating an object using factory is called as Field Injection.**
+**BY default the Scope	 of the Component is "Singleton".**
+**BY default the objects of the classes defined as Component are early instantiated. i.e even if we do not call .getBeans({class_name}.class) the object of the class is created. **
+**Singleton is by default early instantiation, but for prototype it is by default early instantiation.**
+**We have to give priority to one class of multiple implementations of an interface.**
+**We can use @Qualifier to override the primary class and create object of some other class instead of primary.**
+**Alternatively we can use @Priority(value = 1/2/3) to set priorities.
