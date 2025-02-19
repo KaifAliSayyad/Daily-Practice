@@ -19,3 +19,36 @@ HTTP methods
 3. PUT		- Update (overwrite)
 4. PATCH	- Update (append)
 5. DELETE	- Delete
+
+---------------------------------------------------------------------------------------------------------------
+REST API = URL + HTTP method
+---------------------------------------------------------------------------------------------------------------
+* Content Negotiation
+We can specify browser type of content we are trying to return
+ex : syntax "@GetMapping(path="/", produces="text/html")" where default type is "text/html" and others are text/xml, text/json
+
+---------------------------------------------------------------------------------------------------------------
+Parameters
+1. Query parameters : "url?key1=value1&key2=value2"
+2. Path parameters : "url/name/age" while on controller use "@GetMapping("path/(user)/(age)")"
+
+---------------------------------------------------------------------------------------------------------------
+Assignment
+
+Student
+--------
+rollNo
+name
+standard
+school
+percentage
+ 
+ 
+/students			 - get all students
+/student/rollNo			 - get specific student with given rollNo
+/students/school?name=DPS	 - get all students of that school
+/students/result?pass=true/false - all students above 40% / below 40%
+/students/5/count		 - how many students in 5th standard
+/students/strength?school=DPS	 - total strength for given school name
+/students/toppers		 - top 5 percentage students
+/students/topper/3		 - topper of 3rd standard
