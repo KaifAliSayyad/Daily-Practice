@@ -1,0 +1,21 @@
+Date : 19-02-2025
+
+REST 
+---------------------------------------------------------------------------------------------------------------
+RESTful Service					vs		SOAP webservice
+1. REpresentational State Transfer			       1. Simple Object Access Protocol
+2. ROA (Resource Oriented Architecture)			       2. SOA (Service Oriented Architecture)
+3. JSON (default)/ XML/ CSV/ PlainText			       3. XML
+4. HTTP							       4. SOAP over HTTP, SOAP over JMP
+5. Stateless						       5. Stateless,	  Statefull
+6. Faster						       6. Slower
+7. Easy/ Lightweight					       7. Complex
+8. Single URL can perform multiple task			       8. Different url for different task.
+
+---------------------------------------------------------------------------------------------------------------
+HTTP methods
+1. GET		- Retrieve
+2. POST		- Creating
+3. PUT		- Update (overwrite)
+4. PATCH	- Update (append)
+5. DELETE	- Delete
