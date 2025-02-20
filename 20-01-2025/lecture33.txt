@@ -1,0 +1,11 @@
+Date : 20-02-2025
+
+Spring Data JPA
+---------------------------------------------------------------------------------------------------------
+JDBC -> Problem with this is we need to rewrite logic everytime while shifting to another db (ex : MySQL -> monogo)
+ |
+ORM -> It is a concept just like OOPs
+ |
+Hibernate -> It is framework which is implementation of ORM (more like hibernate : iBatis,TopLink,etc)
+ |
+JPA -> It is a set of interfaces which are implementated by Hibernate and alike frameworks. So that by using JPA we are now not only Database independent but also Framework independent.
