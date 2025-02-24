@@ -1,0 +1,17 @@
+Date : 24-02-2025
+
+Micro-services
+-----------------------------------------------------------------------------------------------------------------  
+   Monolithic			vs		Microservices
+--------------------------------------------------------------------------
+1. Single Server				Multiple Servers
+2. Single DB					Multiple DB
+3. All modules in single server running		Isolated with it's own server and DB
+-----------------------------------------------------------------------------------------------------------------  
+Implementation of Microservice architecture
+1. Create services
+2. Register services in Eureka Server
+3. Discover the services from Eureka server
+4. Load Balancing
+5. Failover handling.
+6. API Gateway
