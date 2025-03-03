@@ -1,0 +1,57 @@
+Date : 27-02-2025
+
+JavaScript
+---------------------------------------
+JavaScript 				vs	JAVA
+1. Scripting language				Programming language
+2. Dynamically/ loosely typed			Statically/ Strictly typed
+3. Object based					Object oriented	
+4. ; is optional				; is mandatory
+5. String can be in '' or "" 			Only in ""
+
+----------------------------------------
+JavaScript types
+------------------
+1. Core JavaScript - Variables, Constants, Datatypes, Operators, Operands, Control, Statements, Inbuilt Functions, Custom Functions, Inbuilt Objects, Custom Objects, Timer API's, REST & Spread, etc.
+2. Client side JavaScript - BOM, DOM, Event Handling, etc. (Angular, React, Vue JS, etc)
+3. Server side JavaScript - File handling, DB Operationsm Middleware, etc. (Node js, Express, etc)
+
+----------------------------------------
+JS Types
+-----------------
+Internal JS : Use <script> tag in html
+External JS : Use <script scr="external file.js"> tag in html
+
+----------------------------------------
+Data Types
+----------------------------------------
+undefined
+number
+string
+Boolean
+object
+function
+
+----------------------------------------
+Operators
+----------------
+Arithmetic
+Conditional
+Bitwise
+Logical
+Relational
+Assignment
+Shift
+Inc/ Dec
+**Only in js**
+Spread/ Rest	: ...
+Arrow		: =>
+Equality	: ==, ===
+Optional Chaining : ?.
+
+----------------------------------------
+Control Statements
+-------------------
+Conditional	: if, if-else, if-else-if, nested-if, switch
+Looping		: for, while, do-while, for-in, for-of
+Branching	: continue, break
