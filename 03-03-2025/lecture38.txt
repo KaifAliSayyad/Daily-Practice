@@ -1,0 +1,16 @@
+Date : 03-03-2025
+
+ES6/ ECMAScript features
+----------------------------
+see es6_features.png
+
+-----------------------------------
+ES7/typescript
+---------------------
+Type Safe
+interfaces
+Generics
+Exponential operator
+Access specifiers
+-----------------------------
+1. No constructure overloading
