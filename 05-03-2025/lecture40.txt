@@ -1,0 +1,34 @@
+Date : 05-03-2025
+
+UI/ Frontend/ Web
+----------------------------
+Angular
+React
+Vue JS
+etc..
+
+--------------------------------------------------------------
+Angular				vs 		React
+1. Framework					Library
+2. Complete					Minimal module
+3. Google					Facebook
+4. Read DOM					Virtual DOM
+
+-----------------------------------------------------------------
+Angular JS			vs		Angular
+1. Library					Framework
+2. v1.x						v2+
+3. JavaScript					TypeScript
+4. Controller oriented				Component oriented
+
+-----------------------------------------------------------------
+Data Binding in Angular
+1. One-way binding : 
+		a. TS	->	HTML
+			i. Interpolation {{}}
+			ii. Property Binding []
+		b. HTML -> 	TS
+			i. Event Binding ()
+2. Two-way binding :
+		a. HTML	<->	TS
+			i. ng-model [( )]
