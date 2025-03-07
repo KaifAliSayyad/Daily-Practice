@@ -1,0 +1,10 @@
+Date : 07-03-2025
+
+
+Services
+----------------------------------------------------------------------------------------------------------------
+Services are meant to implement some common logic which can be injected to multiple components.
+
+Custom Directives
+----------------------------------------------------------------------------------------------------------------
+	ElementRef

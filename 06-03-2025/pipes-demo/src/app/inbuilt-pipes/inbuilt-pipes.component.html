@@ -1,0 +1,29 @@
+<div class="pipes-content">
+    <div class="heading">
+        <div class="h3">Pipes Demo</div>
+    </div>
+    <hr>
+    <div class="body">
+        <p> {{str}}</p><br>
+        <p> {{str | uppercase}}</p><br>
+        <p> {{str | lowercase}}</p><br>
+        <p> {{str | slice : 5}}</p><br>
+        <p> {{str | slice : 5 : 11}}</p><br>
+        <hr>
+        <p> {{amt}}</p><br>
+        <p> {{amt | currency}}</p><br>
+        <p> {{amt | currency : 'INR'}}></p><br>
+        <p> {{amt | currency: 'EUR'}}</p><br>
+        <p> {{amt | currency: 'JPY'}}</p><br>
+        <p> {{amt | currency: 'SAR'}}</p><br>
+        <hr>
+        <p> {{date}}</p><br>
+        <p> {{date | date}}</p><br>
+        <p> {{date | date: 'fullDate'}}</p><br>
+        <p> {{date | date: 'long'}}</p><br>
+        <p> {{date | date : 'yyyy-MM-dd'}}</p><br>
+        <p> {{date | date : 'dd/MM/yyyy hh:mm:ss
+        '}}</p><br>
+        <hr>
+    </div>
+</div>

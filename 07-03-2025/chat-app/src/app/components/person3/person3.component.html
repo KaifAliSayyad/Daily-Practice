@@ -1,0 +1,16 @@
+<div class="person1-content">
+    <div class="heading">
+        <h2>Person 3</h2>
+    </div>
+    <div class="body">
+        <div class="message-field">
+            <input #mi>
+            <button (click)="sendMessage(mi.value)">Send</button>
+        </div>
+        <div class="messages">
+            @for (msg of this.cs.messages; track msg) {
+                <p>{{msg}}</p>
+            }
+        </div>
+    </div>
+</div>

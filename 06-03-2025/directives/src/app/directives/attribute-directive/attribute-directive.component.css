@@ -1,0 +1,47 @@
+#ngClass-example{
+    width: fit-content;
+    height: 50px;
+    color: black;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+}
+
+.uniqueId:hover {
+    background-color: lightgray;
+}
+
+.italic{
+    font-style: italic;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+button{
+    background-color: white;
+    font-family: 'Inter', sans-serif;
+    border: 1px solid darkgray;
+    border-radius: 10%;
+    height: auto;
+    width: auto;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-inline: 10px;
+}
+
+#ngStyle-example{
+    width: fit-content;
+    height: 50px;
+    color: black;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+}

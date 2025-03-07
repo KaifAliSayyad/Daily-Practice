@@ -1,0 +1,18 @@
+<div class="attribute-directive-content">
+    <div class="heading">
+        <p>Attribute Directive</p>
+    </div>
+    <div class="body">
+        <div id="ngClass-example" [ngClass]="{italic: isItalic, bold: isBold}">
+            Demo For ngClass Directive 🧔🏻‍♂️
+        </div>
+        <button (click)="toggleItalic()">Toggle Italic</button>
+        <button (click)="toggleBold()">Toggle Bold</button>
+        <hr>
+        <div id="ngStyle-example" [ngStyle]="{'background-color': color}">
+            🧔🏿‍♂️🧔🏻‍♂️
+        </div>
+        <label>Start typing the color name to change the background-color : </label>
+        <input type="color" [(ngModel)]="color">
+    </div>
+</div>

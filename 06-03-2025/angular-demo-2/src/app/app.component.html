@@ -1,0 +1,24 @@
+<div class="content">
+  <div class="heading">
+    <h2>Learning Custom Tag with Attributes</h2>
+  </div>
+  <hr>
+  <employee username="WasRequired"></employee>
+  <employee username="Kaif" [age]="25"></employee>
+  <employee username="Ali"></employee>
+  <hr>
+  <div class="">
+    @if (condition) {
+      <life-cycle></life-cycle>
+    } @else {
+      <p>Condition is false</p>
+    }
+    <div (click)="toggle()"
+      style="height: fit-content; width: fit-content; padding: 5px; font-family: 'Inter', sans-serif; background-color: aliceblue; 
+      color: black; border: 1px solid #0000002b;
+      border-radius: 15%;"
+    >
+      Toggle Life-cycle
+    </div>
+  </div>
+</div>
