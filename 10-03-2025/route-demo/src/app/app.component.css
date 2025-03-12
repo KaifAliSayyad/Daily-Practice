@@ -1,0 +1,32 @@
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    height: 97vh;
+    flex-wrap: nowrap;
+}
+
+.header{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.body{
+    flex: 6;
+    display: flex;
+    align-self: start;
+    justify-content: center;
+    /* min-height: 60vh; */
+    flex-wrap: wrap;
+}
+
+.footer{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}

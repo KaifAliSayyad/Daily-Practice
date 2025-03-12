@@ -1,0 +1,23 @@
+<div class="body">
+    <form (submit)="login($event)">
+        <span>
+            Username : <input type="text"><br>
+        </span>
+        <span>
+            Password : <input type="password"><br>
+        </span>
+        <span>
+            Role: <select>
+                    <option>Manager</option>
+                    <option>Admin</option>
+                    <option>Employee</option>
+                </select>
+    </span><br>
+        <input type="submit" value="Login">
+        <input type="reset" value="Reset">
+    </form>
+
+    @if(this.msg.length > 0){
+    <p>{{msg}}</p>
+    }
+</div>

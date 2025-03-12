@@ -8,3 +8,9 @@ Services are meant to implement some common logic which can be injected to multi
 Custom Directives
 ----------------------------------------------------------------------------------------------------------------
 	ElementRef
+	@HostListener
+----------------------------------------------------------------------------------------------------------------
+Forms
+-------------
+1. Template Driven Form (html)
+2. Reactive forms (ts)

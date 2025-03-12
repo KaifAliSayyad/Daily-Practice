@@ -1,0 +1,23 @@
+<div class="content">
+  <div class="heading">
+    <h2>Froms Demo</h2>
+  </div>
+  <div class="body">
+    <div class="switch">
+      <div class="template" (click) = "setTemplate()"></div>
+      <div class="reactive" (click) = "setReactive()"></div>
+      <div class="event" (click) = "setEvent()"></div>
+    </div>
+    @switch (component) {
+      @case ("template") {
+        <app-template-driven></app-template-driven>
+      }@case ("reactive") {
+        <app-reactive-forms></app-reactive-forms>
+      }@case ("event") {
+        <app-event-driven></app-event-driven>
+      }@default {
+        <p>Please select a form type.</p>
+      }
+    }
+  </div>
+</div>

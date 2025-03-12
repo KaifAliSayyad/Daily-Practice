@@ -1,0 +1,12 @@
+h1{
+    text-align: center;
+}
+
+.navigation{
+    /* width: 100%; */
+    display: flex;
+    gap: 50px;
+    flex-direction: row;
+    align-items: space-between;
+    justify-content: space-between;
+}
