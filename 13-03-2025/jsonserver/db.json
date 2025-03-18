@@ -1,0 +1,60 @@
+{
+  "employees": [
+    {
+      "id": "1",
+      "name": "Ravi",
+      "age": 25,
+      "salary": 30000,
+      "designation": "Tester"
+    },
+    {
+      "id": "2",
+      "name": "Raj",
+      "age": 26,
+      "salary": 35000,
+      "designation": "Programmer"
+    },
+    {
+      "id": "3",
+      "name": "Rahul",
+      "age": 27,
+      "salary": 40000,
+      "designation": "Manager"
+    },
+    {
+      "id": "4",
+      "name": "Ramesh",
+      "age": 28,
+      "salary": 45000,
+      "designation": "Analyst"
+    },
+    {
+      "id": "5",
+      "name": "Rakesh",
+      "age": 29,
+      "salary": 50000,
+      "designation": "Programmer"
+    },
+    {
+      "id": "6",
+      "name": "Rajesh",
+      "age": 30,
+      "salary": 55000,
+      "designation": "Tester"
+    },
+    {
+      "id": "7",
+      "name": "Kaif",
+      "age": "21",
+      "salary": "25000",
+      "designation": "Programmer"
+    },
+    {
+      "id": "8",
+      "name": "Ali",
+      "age": "22",
+      "salary": "260000",
+      "designation": "Tester"
+    }
+  ]
+}
